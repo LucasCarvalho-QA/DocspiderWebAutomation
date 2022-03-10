@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using DocspiderWebAutomation.Utils.ReportManagement;
+using Newtonsoft.Json;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -17,12 +18,21 @@ namespace DocspiderWebAutomation.SetupProject
         public string Navegador { get; set; }
 
         public static IWebDriver driver;
+        public static string localRunId = string.Empty;
         private static string arquivoDeConfiguracao = Path.Combine(Path.Combine(Environment.CurrentDirectory, "SetupProject", "ConfiguracoesDeAmbiente.json"));
         public Setup configuracoes;
+        readonly ReportService reportService = new ReportService();
+        Report report = new Report();
+        ScreenUtils screenUtils = new ScreenUtils();
+        static Stopwatch stopwatch = new Stopwatch();
+        public static string tempoDecorridoTotal;
 
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
+            if (localRunId == string.Empty)
+                localRunId = $"Local_Run_{DateTime.Now:HHmmss}";
+
             string json = Utils.StringFormatter.Json.LeitorJson(arquivoDeConfiguracao);
             configuracoes = JsonConvert.DeserializeObject<Setup>(json);
 
@@ -42,14 +52,26 @@ namespace DocspiderWebAutomation.SetupProject
         {
             driver.Manage().Cookies.DeleteAllCookies();
             driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = new TimeSpan(0, 0, 10);
+            driver.Manage().Timeouts().ImplicitWait = new TimeSpan(0, 0, 15);
             driver.Navigate().GoToUrl(configuracoes.Ambiente);
         }        
 
         [TearDown]
         public void SetupAfterEachTest()
         {
-            
+            report.GenerateReport();
+            var localReport = Report.report;
+
+            if (TestContext.CurrentContext.Result.FailCount > 0)
+                localReport.StackTrace += TestContext.CurrentContext.Result.Message ?? "";
+
+            localReport.Outcome = TestContext.CurrentContext.Result.Outcome.ToString();
+
+            stopwatch.Stop();
+            tempoDecorridoTotal = stopwatch.Elapsed.TotalSeconds.ToString("N2");
+            localReport.ElapsedTime = tempoDecorridoTotal;
+            reportService.SaveReport(reportService.GetReport(localReport), localReport.Outcome);
+            screenUtils.PrintScreen(localReport.Outcome);
         }
 
         [OneTimeTearDown]

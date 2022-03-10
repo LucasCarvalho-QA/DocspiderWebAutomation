@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,9 +9,8 @@ namespace DocspiderWebAutomation.Page
     {
         public static void AcessarBuscaAvancada()
         {
-            PortalDocumentosPage.RealizarBuscaPorTermo("");            
+            PortalDocumentosPage.PressionarBotaoBuscar();            
         }
-
         public static void SelecionarFiltro_PesquisarPorPalavras()
         {
             Elementos.BuscaAvancada.RbtnBuscadoPorPalavra().Click();
@@ -22,7 +22,7 @@ namespace DocspiderWebAutomation.Page
 
         public static void PreencherTermoDeBusca(string termo)
         {
-            Elementos.BuscaAvancada.RbtnBuscadoPorExpressoes().SendKeys(termo);
+            Elementos.BuscaAvancada.TxtTermoDaBusca().SendKeys(termo);
         }
 
         public static void PressionarBotao_PesquisarTermos()
@@ -37,7 +37,7 @@ namespace DocspiderWebAutomation.Page
 
         public static void SelecionarFiltro_FiltrarQualquerPalavra()
         {
-            Elementos.BuscaAvancada.RbtnComQualquerUmaDasPalavras().Click();
+            Elementos.BuscaAvancada.RbtnComQualquerUmaDasPalavras();
         }
 
         public static void PreencherFiltroDeBusca(string termo)
@@ -48,6 +48,11 @@ namespace DocspiderWebAutomation.Page
         public static void PressionarBotao_PesquisarFiltros()
         {
             Elementos.BuscaAvancada.BtnPesquisarFiltro().Click();
+        }
+
+        public static void AguardarResultadosPesquisa()
+        {
+            Utils.Wait.CustomWait.WaitUntilElementClickable(By.Id("ComTodasAsPalavras"));
         }
     }
 }

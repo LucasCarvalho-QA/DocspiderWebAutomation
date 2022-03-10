@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DocspiderWebAutomation.Page
@@ -9,17 +10,29 @@ namespace DocspiderWebAutomation.Page
     {
         public static void RealizarBuscaPorTermo(string termo)
         {
-            Elementos.PortalDocumentos.TxtDigiteConteudoBusca().SendKeys(termo);
+            Elementos.PortalDocumentos.TxtDigiteConteudoBusca().SendKeys(termo);            
+        }
+        public static void PressionarBotaoBuscar()
+        {
             Elementos.PortalDocumentos.BtnBuscar().Click();
         }
 
-        public static bool ValidarExistenciaDeResultado()
+        public static bool ValidarExistenciaDeTermoNoResultado(string termoBusca = null)
         {
-            IWebElement elementoEsperado = Elementos.PortalDocumentos.CardResultados();
+            var elementosEsperados = Elementos.PortalDocumentos.CardResultados();
 
-            if (elementoEsperado == null)
+            if (elementosEsperados[0].Text.Equals("Nenhum documento encontrado"))
                 return false;
-            return true;
+            if (termoBusca == null)
+                return true;
+
+            bool resultado = false;
+
+            foreach (var card in elementosEsperados)                
+                if (card.Text.Contains(termoBusca))
+                    resultado = true;  
+            
+            return resultado;
         }
     }
 }

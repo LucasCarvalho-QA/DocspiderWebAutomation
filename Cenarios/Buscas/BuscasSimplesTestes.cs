@@ -15,9 +15,10 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
 
             //Act
             Page.PortalDocumentosPage.RealizarBuscaPorTermo("");
+            Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado();
             Assert.IsTrue(resultado);
         }
 
@@ -30,9 +31,10 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
 
             //Act
             Page.PortalDocumentosPage.RealizarBuscaPorTermo("Amazonia");
+            Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado("Amazonia");
             Assert.IsTrue(resultado);
         }
 
@@ -45,10 +47,11 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
 
             //Act
             Page.PortalDocumentosPage.RealizarBuscaPorTermo("Amazonia Amazonia");
+            Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado("Amazonia Amazonia");
+            Assert.IsFalse(resultado);
         }
 
         [TestCase(TestName = "CT004_Realizar_busca_normal_com_conteúdo_inválido")]
@@ -60,9 +63,10 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
 
             //Act
             Page.PortalDocumentosPage.RealizarBuscaPorTermo("llllll");
+            Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado();
             Assert.IsFalse(resultado);
         }
     }

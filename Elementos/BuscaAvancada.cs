@@ -1,5 +1,6 @@
 ﻿using DocspiderWebAutomation.Utils.Wait;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -30,13 +31,16 @@ namespace DocspiderWebAutomation.Elementos
         }
 
         public static IWebElement RbtnComTodasAsPalavras()
-        {
-            return driver.FindElement(By.Id("ComTodasAsPalavras"));
+        {     
+            return WaitForElement(By.Id("ComTodasAsPalavras"));
         }
 
         public static IWebElement RbtnComQualquerUmaDasPalavras()
         {
-            return driver.FindElement(By.Id("ComQualquerUmaDasPalavras"));
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.document.getElementById('ComQualquerUmaDasPalavras').click()");
+
+            return null;
         }
 
         public static IWebElement TxtSemAsPalavras()
@@ -62,6 +66,11 @@ namespace DocspiderWebAutomation.Elementos
         public static IWebElement BtnPesquisarDataEfetivacao()
         {
             return driver.FindElement(By.XPath("//*[@id='efetivacao']/button"));
+        }
+
+        public static IWebElement AguardarResultados()
+        {
+            return driver.FindElement(By.Id("ComTodasAsPalavras"));
         }
 
     }

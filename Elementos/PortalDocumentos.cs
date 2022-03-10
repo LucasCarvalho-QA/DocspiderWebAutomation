@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DocspiderWebAutomation.Elementos
@@ -18,17 +19,19 @@ namespace DocspiderWebAutomation.Elementos
             return driver.FindElement(By.XPath("//*[@id='portal']/header/nav/div[2]/div[1]/form/div/button"));
         }
 
-        public static IWebElement CardResultados()
+        public static List<IWebElement> CardResultados()
         {
             try
             {
-                return driver.FindElement(By.ClassName("ds-card"));
+                return driver.FindElements(By.Id("documents")).ToList();
             }
             catch (Exception)
             {
                 return null;
             }            
         }
+
+        
     }
 
 }

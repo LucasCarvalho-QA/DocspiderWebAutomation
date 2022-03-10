@@ -18,7 +18,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado();
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
             Assert.IsTrue(resultado);
         }
 
@@ -34,7 +34,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado("Amazonia");
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
             Assert.IsTrue(resultado);
         }
 
@@ -50,8 +50,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado("Amazonia Amazonia");
-            Assert.IsFalse(resultado);
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Assert.IsTrue(resultado);
         }
 
         [TestCase(TestName = "CT004_Realizar_busca_normal_com_conteúdo_inválido")]
@@ -66,7 +66,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado();
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
             Assert.IsFalse(resultado);
         }
     }

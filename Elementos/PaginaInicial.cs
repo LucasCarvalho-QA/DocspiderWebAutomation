@@ -7,7 +7,8 @@ namespace DocspiderWebAutomation.Elementos
     {
         public static IWebElement BtnAcessarPortalDocumentos()
         {
-            return driver.FindElement(By.XPath("//*[@id='holderPortal/PortalDocumentos/']"));
+            ////*[@id="portal"]/header/nav/div[2]/div[1]/form/div/button
+            return driver.FindElement(By.XPath("//*[@id='portal']/header/nav/div[2]/div[1]/form/div/button"));
         }
     }
 }

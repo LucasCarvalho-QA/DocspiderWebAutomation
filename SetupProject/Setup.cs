@@ -23,9 +23,9 @@ namespace DocspiderWebAutomation.SetupProject
         public Setup configuracoes;
         readonly ReportService reportService = new ReportService();
         Report report = new Report();
-        ScreenUtils screenUtils = new ScreenUtils();
         static Stopwatch stopwatch = new Stopwatch();
         public static string tempoDecorridoTotal;
+        public static string outcome;
 
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
@@ -71,14 +71,13 @@ namespace DocspiderWebAutomation.SetupProject
             tempoDecorridoTotal = stopwatch.Elapsed.TotalSeconds.ToString("N2");
             localReport.ElapsedTime = tempoDecorridoTotal;
             reportService.SaveReport(reportService.GetReport(localReport), localReport.Outcome);
-            screenUtils.PrintScreen(localReport.Outcome);
+            ScreenshotUtils.PrintScreen();
         }
 
         [OneTimeTearDown]
         public void RunAfterAnyTests()
         {
             driver.Close();
-            //Process.Start("taskkill", "/F /IM chromedriver.exe");
         }
     }
 }

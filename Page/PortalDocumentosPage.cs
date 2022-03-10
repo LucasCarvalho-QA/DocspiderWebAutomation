@@ -34,5 +34,15 @@ namespace DocspiderWebAutomation.Page
             
             return resultado;
         }
+
+        public static bool ValidarExistenciaDeResultado()
+        {
+            var elementosEsperados = Elementos.PortalDocumentos.CardResultados();
+
+            if (elementosEsperados[0].Text.Equals("Nenhum documento encontrado"))
+                return false;
+            else
+                return true;
+        }
     }
 }

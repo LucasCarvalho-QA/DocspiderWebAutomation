@@ -19,9 +19,10 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.PreencherTermoDeBusca("documentos");
             Page.BuscaAvancadaPage.SelecionarFiltro_PesquisarPorPalavras();
             Page.BuscaAvancadaPage.PressionarBotao_PesquisarTermos();
+            Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado("documentos");
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
             Assert.IsTrue(resultado);
         }
 
@@ -38,10 +39,11 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.PreencherTermoDeBusca("documento de teste");
             Page.BuscaAvancadaPage.SelecionarFiltro_PesquisarPorPalavras();
             Page.BuscaAvancadaPage.SelecionarFiltro_FiltrarQualquerPalavra();
+            Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado();
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
             Assert.IsTrue(resultado);
         }
 
@@ -56,10 +58,11 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AcessarBuscaAvancada();
             Page.BuscaAvancadaPage.PreencherTermoDeBusca("documentos gerais");
             Page.BuscaAvancadaPage.PreencherFiltroDeBusca("documentos");
-            Page.BuscaAvancadaPage.SelecionarFiltro_PesquisarPorPalavras();            
+            Page.BuscaAvancadaPage.SelecionarFiltro_PesquisarPorPalavras();
+            Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado("gerais");
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
             Assert.IsTrue(resultado);
         }
 
@@ -75,10 +78,11 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.PreencherTermoDeBusca("documentos gerais");
             Page.BuscaAvancadaPage.PreencherFiltroDeBusca("documentos");
             Page.BuscaAvancadaPage.SelecionarFiltro_PesquisarPorPalavras();            
-            Page.BuscaAvancadaPage.SelecionarFiltro_FiltrarQualquerPalavra();            
+            Page.BuscaAvancadaPage.SelecionarFiltro_FiltrarQualquerPalavra();
+            Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado("documentos gerais");
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
             Assert.IsTrue(resultado);
         }
 
@@ -94,11 +98,12 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.PreencherTermoDeBusca("teste de obsoletar");
             Page.BuscaAvancadaPage.SelecionarFiltro_PesquisarPorExpressoes();
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
-            Page.BuscaAvancadaPage.SelecionarFiltro_FiltrarQualquerPalavra();    
+            Page.BuscaAvancadaPage.SelecionarFiltro_FiltrarQualquerPalavra();
+            Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado("teste de obsoletar");
-            Assert.IsFalse(resultado);
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Assert.IsTrue(resultado);
         }
 
         [TestCase(TestName = "CT010_Realizar_busca_avançada_filtro_expressões_qualquer")]
@@ -113,10 +118,11 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.PreencherTermoDeBusca("teste de obsoletar");
             Page.BuscaAvancadaPage.PreencherFiltroDeBusca("documentos");
             Page.BuscaAvancadaPage.SelecionarFiltro_PesquisarPorExpressoes();            
-            Page.BuscaAvancadaPage.SelecionarFiltro_FiltrarQualquerPalavra();            
+            Page.BuscaAvancadaPage.SelecionarFiltro_FiltrarQualquerPalavra();
+            Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado("teste de obsoletar");
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
             Assert.IsTrue(resultado);
         }
 
@@ -133,9 +139,10 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.PreencherFiltroDeBusca("documentos");
             Page.BuscaAvancadaPage.SelecionarFiltro_PesquisarPorExpressoes();
             Page.BuscaAvancadaPage.SelecionarFiltro_FiltrarQualquerPalavra();
+            Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeTermoNoResultado("teste de obsoletar");
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
             Assert.IsTrue(resultado);
         }
     }

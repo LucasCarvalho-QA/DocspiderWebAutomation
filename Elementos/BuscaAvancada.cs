@@ -68,10 +68,5 @@ namespace DocspiderWebAutomation.Elementos
             return driver.FindElement(By.XPath("//*[@id='efetivacao']/button"));
         }
 
-        public static IWebElement AguardarResultados()
-        {
-            return driver.FindElement(By.Id("ComTodasAsPalavras"));
-        }
-
     }
 }

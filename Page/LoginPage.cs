@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,6 +12,38 @@ namespace DocspiderWebAutomation.Page
             Elementos.Login.TxtUsuarioLogin().SendKeys("docspider");
             Elementos.Login.TxtUsuarioSenha().SendKeys("docspider");
             Elementos.Login.BtnAcessar().Click();
+        }
+
+        public static void RealizarLogin(string usuario, string senha)
+        {
+            Elementos.Login.TxtUsuarioLogin().SendKeys(usuario);
+            Elementos.Login.TxtUsuarioSenha().SendKeys(senha);
+            Elementos.Login.BtnAcessar().Click();
+        }
+
+        internal static bool ValidarLoginSemSucesso()
+        {
+            if (Elementos.Login.BtnAcessar() == null)
+                return true;
+            else
+                return true;
+        }
+
+        internal static bool ValidarLoginComSucesso()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static string RetornarMensagemDeLoginInvalido()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static bool ValidarLogin()
+        {
+            if (Elementos.Login.BtnAcessar() == null)
+                return false;  
+            return true;
         }
     }
 }

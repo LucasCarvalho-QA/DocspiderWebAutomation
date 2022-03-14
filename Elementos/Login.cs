@@ -21,7 +21,6 @@ namespace DocspiderWebAutomation.Elementos
         public static IWebElement BtnAcessar()
         {
             return driver.FindElement(By.Id("loginButton"));
-        }//holderPortal/PortalDocumentos/
-    }    
-        
+        }
+    }
 }

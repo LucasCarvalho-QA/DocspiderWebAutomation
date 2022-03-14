@@ -10,5 +10,15 @@ namespace DocspiderWebAutomation.Page
         {
             Elementos.PaginaInicial.BtnAcessarPortalDocumentos().Click();
         }
+
+        public static bool VerificarPresencaNaPagina()
+        {
+            var elementosEsperados = Elementos.PaginaInicial.BtnAcessarPortalDocumentos();
+
+            if (elementosEsperados == null)
+                return false;
+            else
+                return true;
+        }
     }
 }

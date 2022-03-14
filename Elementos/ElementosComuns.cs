@@ -12,5 +12,10 @@ namespace DocspiderWebAutomation.Elementos
         {
             return driver.FindElement(By.Id("ComTodasAsPalavras"));
         }
+
+        public static IWebElement PaginaInteira()
+        {
+            return driver.FindElement(By.Id("portal"));
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace DocspiderWebAutomation.Utils.ReportManagement
             var bmpScreen = new Bitmap(new MemoryStream(screenshot.AsByteArray));
 
             if (element == null)
-                element = Elementos.ElementosComuns.AguardarResultadosDaPesquisa();
+                element = Elementos.ElementosComuns.PaginaInteira();
 
             var cropArea = new Rectangle(element.Location, element.Size);
 

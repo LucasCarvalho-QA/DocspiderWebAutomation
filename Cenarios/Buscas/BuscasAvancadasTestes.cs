@@ -265,7 +265,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT019_Realizar_busca_avançada_filtro_portal_normativos_internos")]
+        [TestCase(TestName = "CT020_Realizar_busca_avançada_filtro_portal_normativos_internos")]
         public void BuscasAvancada_FiltroPortalNormativoInternos()
         {
             //Arrange
@@ -285,7 +285,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT020_Realizar_busca_avançada_filtro_portal_processos")]
+        [TestCase(TestName = "CT021_Realizar_busca_avançada_filtro_portal_processos")]
         public void BuscasAvancada_FiltroPortalProcessos()
         {
             //Arrange
@@ -305,7 +305,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT021_Realizar_busca_avançada_filtro_situação_vigente")]
+        [TestCase(TestName = "CT022_Realizar_busca_avançada_filtro_situação_vigente")]
         public void BuscasAvancada_FiltroSituacaoVigente()
         {
             //Arrange
@@ -325,7 +325,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT022_Realizar_busca_avançada_filtro_situação_obsoleto")]
+        [TestCase(TestName = "CT023_Realizar_busca_avançada_filtro_situação_obsoleto")]
         public void BuscasAvancada_FiltroSituacaoObsoleto()
         {
             //Arrange
@@ -345,7 +345,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT023_Realizar_busca_avançada_filtro_situação_expirado")]
+        [TestCase(TestName = "CT024_Realizar_busca_avançada_filtro_situação_expirado")]
         public void BuscasAvancada_FiltroSituacaoExpirado()
         {
             //Arrange
@@ -365,7 +365,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT024_Realizar_busca_avançada_filtro_situação_vigencia_futura")]
+        [TestCase(TestName = "CT025_Realizar_busca_avançada_filtro_situação_vigencia_futura")]
         public void BuscasAvancada_FiltroSituacaoVigenciaFutura()
         {
             //Arrange
@@ -385,7 +385,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT025_Realizar_busca_avançada_filtro_tipo_de_documento")]
+        [TestCase(TestName = "CT026_Realizar_busca_avançada_filtro_tipo_de_documento")]
         public void BuscasAvancada_FiltroTipoDeDocumento()
         {
             //Arrange
@@ -405,7 +405,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT026_Realizar_busca_avançada_filtro_categoria")]
+        [TestCase(TestName = "CT027_Realizar_busca_avançada_filtro_categoria")]
         public void BuscasAvancada_FiltroCategoria()
         {
             //Arrange
@@ -574,6 +574,134 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             //Assert
             bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
             Assert.IsTrue(resultado);
-        }        
+        }
+
+        [TestCase(TestName = "CT039_Visualizar_últimos_acessados")]
+        public void VisualizarMenuLateral_UtimosAcessados()
+        {
+            //Arrange
+            Page.LoginPage.RealizarLoginComSucesso();
+            Page.PaginaInicialPage.AcessarPortalDocumentos();
+
+            //Act
+            Page.BuscaAvancadaPage.AcessarBuscaAvancada();
+            Page.BuscaAvancadaPage.SelecionarMenuLateral_UltimasAtualizacoes();
+
+            //Assert
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Assert.IsTrue(resultado);
+        }
+
+        [TestCase(TestName = "CT039_Visualizar_mais_acessados")]
+        public void VisualizarMenuLateral_MaisAcessados()
+        {
+            //Arrange
+            Page.LoginPage.RealizarLoginComSucesso();
+            Page.PaginaInicialPage.AcessarPortalDocumentos();
+
+            //Act
+            Page.BuscaAvancadaPage.AcessarBuscaAvancada();
+            Page.BuscaAvancadaPage.SelecionarMenuLateral_MaisAcessados();
+
+            //Assert
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Assert.IsTrue(resultado);
+        }
+
+        [TestCase(TestName = "CT040_Visualizar_documentos_por_tipo")]
+        public void VisualizarMenuLateral_DocumentoPorTipo()
+        {
+            //Arrange
+            Page.LoginPage.RealizarLoginComSucesso();
+            Page.PaginaInicialPage.AcessarPortalDocumentos();
+
+            //Act
+            Page.BuscaAvancadaPage.AcessarBuscaAvancada();
+            Page.BuscaAvancadaPage.SelecionarMenuLateral_DocumentosPorTipo();
+
+            //Assert
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Assert.IsTrue(resultado);
+        }
+
+        [TestCase(TestName = "CT041_Visualizar_documentos_por_área")]
+        public void VisualizarMenuLateral_DocumentoPorArea()
+        {
+            //Arrange
+            Page.LoginPage.RealizarLoginComSucesso();
+            Page.PaginaInicialPage.AcessarPortalDocumentos();
+
+            //Act
+            Page.BuscaAvancadaPage.AcessarBuscaAvancada();
+            Page.BuscaAvancadaPage.SelecionarMenuLateral_DocumentosPorArea();
+
+            //Assert
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Assert.IsTrue(resultado);
+        }
+
+        [TestCase(TestName = "CT042_Visualizar_documentos_por_indexadores")]
+        public void VisualizarMenuLateral_DocumentoPorIndexadores()
+        {
+            //Arrange
+            Page.LoginPage.RealizarLoginComSucesso();
+            Page.PaginaInicialPage.AcessarPortalDocumentos();
+
+            //Act
+            Page.BuscaAvancadaPage.AcessarBuscaAvancada();
+            Page.BuscaAvancadaPage.SelecionarMenuLateral_DocumentosPorIndexadores();
+
+            //Assert
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Assert.IsTrue(resultado);
+        }
+
+        [TestCase(TestName = "CT043_Visualizar_tutoriais")]
+        public void VisualizarMenuLateral_Tutorias()
+        {
+            //Arrange
+            Page.LoginPage.RealizarLoginComSucesso();
+            Page.PaginaInicialPage.AcessarPortalDocumentos();
+
+            //Act
+            Page.BuscaAvancadaPage.AcessarBuscaAvancada();
+            Page.BuscaAvancadaPage.SelecionarMenuLateral_Tutoriais();
+
+            //Assert
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Assert.IsTrue(resultado);
+        }
+
+        [TestCase(TestName = "CT044_Visualizar_painel_de_atividades")]
+        public void VisualizarMenuLateral_PainelDeAtividades()
+        {
+            //Arrange
+            Page.LoginPage.RealizarLoginComSucesso();
+            Page.PaginaInicialPage.AcessarPortalDocumentos();
+
+            //Act
+            Page.BuscaAvancadaPage.AcessarBuscaAvancada();
+            Page.BuscaAvancadaPage.SelecionarMenuLateral_PainelDeAtividades();
+
+            //Assert
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Assert.IsTrue(resultado);
+        }
+
+        [TestCase(TestName = "CT045_Visualizar_painel_gestão_de_documentos")]
+        public void VisualizarMenuLateral_PainelGestaoDeDocumentos()
+        {
+            //Arrange
+            Page.LoginPage.RealizarLoginComSucesso();
+            Page.PaginaInicialPage.AcessarPortalDocumentos();
+
+            //Act
+            Page.BuscaAvancadaPage.AcessarBuscaAvancada();
+            Page.BuscaAvancadaPage.SelecionarMenuLateral_PainelGestaoDocumentos();
+
+            //Assert
+            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Assert.IsTrue(resultado);
+        }
     }
 }

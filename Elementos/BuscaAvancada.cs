@@ -330,7 +330,7 @@ namespace DocspiderWebAutomation.Elementos
 
         public static IWebElement BtnPesquisarDataValidade()
         {
-            return driver.FindElement(By.XPath("//*[@id='efetivacao']/buttonn"));
+            return driver.FindElement(By.XPath("//*[@id='efetivacao']/button"));
         }////*[@id="comValidadeIndefinida"]
 
         public static IWebElement CheckboxValidade_ValidadeIndefinida()

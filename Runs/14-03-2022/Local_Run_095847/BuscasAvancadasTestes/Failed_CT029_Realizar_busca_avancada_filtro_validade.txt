@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 10:02:29 
+NOME DO MÉTODO: BuscasAvancada_FiltroValidade 
+AZURE TEST CASE: CT029_Realizar_busca_avançada_filtro_validade 
+RESULTADO: Failed:Error 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

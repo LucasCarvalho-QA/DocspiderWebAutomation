@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 13/03/2022 11:29:14 
+NOME DO MÉTODO: BuscasSimples_RealizarBuscaNormalComDoisTermosIguais 
+AZURE TEST CASE: CT002_Realizar_busca_normal_com_dois_termos_iguais 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

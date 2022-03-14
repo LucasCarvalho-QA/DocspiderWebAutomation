@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 13/03/2022 11:57:03 
+NOME DO MÉTODO: BuscasSimples_RealizarBuscaNormalEmBranco 
+AZURE TEST CASE: CT001_Realizar_busca_normal_em_branco 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

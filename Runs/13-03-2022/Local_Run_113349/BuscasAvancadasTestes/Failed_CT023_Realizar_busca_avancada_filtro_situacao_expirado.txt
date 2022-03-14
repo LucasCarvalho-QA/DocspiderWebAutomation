@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 13/03/2022 11:35:15 
+NOME DO MÉTODO: BuscasAvancada_FiltroSituacaoExpirado 
+AZURE TEST CASE: CT023_Realizar_busca_avançada_filtro_situação_expirado 
+RESULTADO: Failed:Error 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

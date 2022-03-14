@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 09:59:13 
+NOME DO MÉTODO: BuscasAvancada_FiltroEfetivacao 
+AZURE TEST CASE: CT028_Realizar_busca_avançada_filtro_efetivação 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

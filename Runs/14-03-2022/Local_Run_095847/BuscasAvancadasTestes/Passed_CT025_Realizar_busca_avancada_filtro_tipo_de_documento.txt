@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 10:01:53 
+NOME DO MÉTODO: BuscasAvancada_FiltroTipoDeDocumento 
+AZURE TEST CASE: CT025_Realizar_busca_avançada_filtro_tipo_de_documento 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

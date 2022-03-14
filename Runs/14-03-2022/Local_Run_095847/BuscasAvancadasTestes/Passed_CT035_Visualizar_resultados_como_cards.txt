@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 10:02:57 
+NOME DO MÉTODO: VisualizarResultadosComoCards 
+AZURE TEST CASE: CT035_Visualizar_resultados_como_cards 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

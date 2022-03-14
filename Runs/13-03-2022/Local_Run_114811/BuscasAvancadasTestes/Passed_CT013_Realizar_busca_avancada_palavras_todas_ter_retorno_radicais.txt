@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 13/03/2022 11:48:22 
+NOME DO MÉTODO: BuscasAvancada_FiltroPalavrasTodasTerRetornoRadicais 
+AZURE TEST CASE: CT013_Realizar_busca_avançada_palavras_todas_ter_retorno_radicais 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

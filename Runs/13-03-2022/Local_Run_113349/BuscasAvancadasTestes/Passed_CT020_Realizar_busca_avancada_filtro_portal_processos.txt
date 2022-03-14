@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 13/03/2022 11:34:51 
+NOME DO MÉTODO: BuscasAvancada_FiltroPortalProcessos 
+AZURE TEST CASE: CT020_Realizar_busca_avançada_filtro_portal_processos 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

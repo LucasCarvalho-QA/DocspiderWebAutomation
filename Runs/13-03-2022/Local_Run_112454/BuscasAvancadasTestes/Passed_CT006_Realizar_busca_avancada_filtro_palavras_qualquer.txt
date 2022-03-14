@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 13/03/2022 11:28:53 
+NOME DO MÉTODO: BuscasAvancada_FiltroPalavrasQualquer 
+AZURE TEST CASE: CT006_Realizar_busca_avançada_filtro_palavras_qualquer 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

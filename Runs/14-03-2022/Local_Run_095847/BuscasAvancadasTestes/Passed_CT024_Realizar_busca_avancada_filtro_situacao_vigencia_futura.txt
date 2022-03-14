@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 10:01:35 
+NOME DO MÉTODO: BuscasAvancada_FiltroSituacaoVigenciaFutura 
+AZURE TEST CASE: CT024_Realizar_busca_avançada_filtro_situação_vigencia_futura 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

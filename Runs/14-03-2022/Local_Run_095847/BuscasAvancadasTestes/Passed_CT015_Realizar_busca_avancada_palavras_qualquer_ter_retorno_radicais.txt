@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 09:59:45 
+NOME DO MÉTODO: BuscasAvancada_FiltroPalavrasQualquerTerRetornoRadicais 
+AZURE TEST CASE: CT015_Realizar_busca_avançada_palavras_qualquer_ter_retorno_radicais 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

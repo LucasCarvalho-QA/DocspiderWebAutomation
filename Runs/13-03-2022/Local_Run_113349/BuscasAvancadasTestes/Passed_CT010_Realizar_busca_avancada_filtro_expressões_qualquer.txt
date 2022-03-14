@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 13/03/2022 11:34:00 
+NOME DO MÉTODO: BuscasAvancada_FiltroExpressoesQualquer 
+AZURE TEST CASE: CT010_Realizar_busca_avançada_filtro_expressões_qualquer 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

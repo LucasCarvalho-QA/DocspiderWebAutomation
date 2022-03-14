@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 13/03/2022 11:26:51 
+NOME DO MÉTODO: BuscasAvancada_FiltroPortalDocRenomeado 
+AZURE TEST CASE: CT018_Realizar_busca_avançada_filtro_portal_doc_renomeado 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

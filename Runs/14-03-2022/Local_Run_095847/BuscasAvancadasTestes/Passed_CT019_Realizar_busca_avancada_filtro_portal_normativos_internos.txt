@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 10:00:58 
+NOME DO MÉTODO: BuscasAvancada_FiltroPortalNormativoInternos 
+AZURE TEST CASE: CT019_Realizar_busca_avançada_filtro_portal_normativos_internos 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

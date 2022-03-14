@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 10:02:38 
+NOME DO MÉTODO: BuscasAvancada_FiltroValidadeIndefinida 
+AZURE TEST CASE: CT030_Realizar_busca_avançada_filtro_validade_indefinida 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 13/03/2022 11:54:46 
+NOME DO MÉTODO: BuscasAvancada_FiltroPalavrasQualquerTerRetornoSinonimos 
+AZURE TEST CASE: CT016_Realizar_busca_avançada_palavras_qualquer_ter_retorno_sinônimos 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

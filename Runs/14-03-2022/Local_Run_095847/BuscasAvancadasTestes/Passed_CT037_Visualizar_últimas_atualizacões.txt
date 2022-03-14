@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 10:02:50 
+NOME DO MÉTODO: VisualizarMenuLateral_UltimasAtualizacoes 
+AZURE TEST CASE: CT037_Visualizar_últimas_atualizações 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 10:03:21 
+NOME DO MÉTODO: BuscasSimples_RealizarBuscaNormalComConteudo 
+AZURE TEST CASE: CT003_Realizar_busca_normal_com_conteúdo 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

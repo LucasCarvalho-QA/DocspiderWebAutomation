@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 10:02:44 
+NOME DO MÉTODO: VisualizarMenuLateral_MeusFavoritos 
+AZURE TEST CASE: CT038_Visualizar_meus_favoritos 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

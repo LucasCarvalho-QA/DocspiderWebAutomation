@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 13/03/2022 11:49:16 
+NOME DO MÉTODO: BuscasAvancada_FiltroSituacaoObsoleto 
+AZURE TEST CASE: CT022_Realizar_busca_avançada_filtro_situação_obsoleto 
+RESULTADO: Failed:Error 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

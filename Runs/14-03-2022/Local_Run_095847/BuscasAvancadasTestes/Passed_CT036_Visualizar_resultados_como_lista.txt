@@ -1,0 +1,12 @@
+================================================================================================== 
+URL:  
+MÉTODO:  
+DATA: 14/03/2022 10:03:05 
+NOME DO MÉTODO: VisualizarResultadosComoLista 
+AZURE TEST CASE: CT036_Visualizar_resultados_como_lista 
+RESULTADO: Passed 
+DURAÇÃO DA CHAMADA:  segundos
+
+TEMPO TOTAL DE EXECUÇÃO: 0,00 segundos
+================================================================================================== 
+

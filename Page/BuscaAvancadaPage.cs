@@ -1,7 +1,9 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace DocspiderWebAutomation.Page
 {
@@ -76,6 +78,7 @@ namespace DocspiderWebAutomation.Page
         }
 
         #region Portal
+        
         public static void SelecionarPortalAutomatizacao()
         {
             Elementos.BuscaAvancada.CheckboxPortal_Automatizacao().Click();
@@ -257,5 +260,47 @@ namespace DocspiderWebAutomation.Page
             Elementos.BuscaAvancada.BtnVisualizacaoEmLista().Click();
         }
         #endregion
+
+        public static (int, int) ValidarQuantidadeDeResultadoApresentados_FiltroPortal()
+        {
+            List<IWebElement> grupoMenu = Elementos.BuscaAvancada.FiltroPortal();
+            int quantidadeDeResultados = PageUtils.RetornarQuantidadeDeResultados();
+            int quantidadeDeDocumentosNoFiltro = PageUtils.RetornarSomatoriaDeDocumentosDoMenuLateral(grupoMenu);
+            
+            return (quantidadeDeDocumentosNoFiltro, quantidadeDeResultados);
+        }
+
+        public static (int, int) ValidarQuantidadeDeResultadoApresentados_FiltroSituacao()
+        {
+            List<IWebElement> grupoMenu = Elementos.BuscaAvancada.FiltroSituacao();
+            int quantidadeDeResultados = PageUtils.RetornarQuantidadeDeResultados();
+            int quantidadeDeDocumentosNoFiltro = PageUtils.RetornarSomatoriaDeDocumentosDoMenuLateral(grupoMenu);
+
+            return (quantidadeDeDocumentosNoFiltro, quantidadeDeResultados);
+        }
+
+        public static (int, int) ValidarQuantidadeDeResultadoApresentados_FiltroTipoDocumento()
+        {
+            List<IWebElement> grupoMenu = Elementos.BuscaAvancada.FiltroTipoDocumento();
+            int quantidadeDeResultados = PageUtils.RetornarQuantidadeDeResultados();
+            int quantidadeDeDocumentosNoFiltro = PageUtils.RetornarSomatoriaDeDocumentosDoMenuLateral(grupoMenu);
+
+            return (quantidadeDeDocumentosNoFiltro, quantidadeDeResultados);
+        }
+
+        public static void ValidarQuantidadeDeResultadoApresentados()
+        {
+            (int, int) quantidadeDeResultadoApresentados_FiltroPortal = ValidarQuantidadeDeResultadoApresentados_FiltroPortal();
+            (int, int) quantidadeDeResultadoApresentados_FiltroSituacao = ValidarQuantidadeDeResultadoApresentados_FiltroSituacao();
+            (int, int) quantidadeDeResultadoApresentados_FiltroTipoDocumento = ValidarQuantidadeDeResultadoApresentados_FiltroTipoDocumento();
+
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(quantidadeDeResultadoApresentados_FiltroPortal.Item1, quantidadeDeResultadoApresentados_FiltroPortal.Item2);
+                Assert.AreEqual(quantidadeDeResultadoApresentados_FiltroSituacao.Item1, quantidadeDeResultadoApresentados_FiltroSituacao.Item2);
+                Assert.AreEqual(quantidadeDeResultadoApresentados_FiltroTipoDocumento.Item1, quantidadeDeResultadoApresentados_FiltroTipoDocumento.Item2);
+            });
+            
+        }
     }
 }

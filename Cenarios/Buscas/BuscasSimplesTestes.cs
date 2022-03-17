@@ -18,8 +18,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT003_Realizar_busca_normal_com_conteúdo")]
@@ -34,8 +34,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            
         }
 
         [TestCase(TestName = "CT002_Realizar_busca_normal_com_dois_termos_iguais")]
@@ -50,8 +50,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT004_Realizar_busca_normal_com_conteúdo_inválido")]
@@ -66,8 +66,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.PortalDocumentosPage.PressionarBotaoBuscar();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsFalse(resultado);
+            Page.PortalDocumentosPage.ValidarNaoExistenciaDeResultado();
         }
     }
 }

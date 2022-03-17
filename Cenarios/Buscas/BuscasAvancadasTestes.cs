@@ -21,11 +21,10 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [Parallelizable]
         [TestCase(TestName = "CT006_Realizar_busca_avançada_filtro_palavras_qualquer")]
         public void BuscasAvancada_FiltroPalavrasQualquer()
         {
@@ -42,8 +41,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
 
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT007_Realizar_busca_avançada_filtro_palavras_todas_sem_as_palavras")]
@@ -61,8 +60,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT008_Realizar_busca_avançada_filtro_palavras_qualquer_sem_as_palavras")]
@@ -81,8 +80,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT009_Realizar_busca_avançada_filtro_expressoes_todas")]
@@ -101,8 +100,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT010_Realizar_busca_avançada_filtro_expressões_qualquer")]
@@ -121,8 +120,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT013_Realizar_busca_avançada_palavras_todas_ter_retorno_radicais")]
@@ -141,8 +140,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.BuscaAvancadaPage.VerificarExistenciaDeRadicaisSinonimos();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT014_Realizar_busca_avançada_palavras_todas_ter_retorno_sinônimos")]
@@ -161,8 +160,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.BuscaAvancadaPage.VerificarExistenciaDeRadicaisSinonimos();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT015_Realizar_busca_avançada_palavras_qualquer_ter_retorno_radicais")]
@@ -181,8 +180,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.BuscaAvancadaPage.VerificarExistenciaDeRadicaisSinonimos();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT016_Realizar_busca_avançada_palavras_qualquer_ter_retorno_sinônimos")]
@@ -201,8 +200,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.BuscaAvancadaPage.VerificarExistenciaDeRadicaisSinonimos();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT017_Realizar_busca_avançada_filtro_portal_automatização")]
@@ -221,8 +220,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT018_Realizar_busca_avançada_filtro_portal_doc_renomeado")]
@@ -241,8 +240,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT019_Realizar_busca_avançada_filtro_portal_normativos_externos")]
@@ -261,8 +260,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT020_Realizar_busca_avançada_filtro_portal_normativos_internos")]
@@ -281,8 +280,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT021_Realizar_busca_avançada_filtro_portal_processos")]
@@ -301,8 +300,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT022_Realizar_busca_avançada_filtro_situação_vigente")]
@@ -321,8 +320,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT023_Realizar_busca_avançada_filtro_situação_obsoleto")]
@@ -341,8 +340,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT024_Realizar_busca_avançada_filtro_situação_expirado")]
@@ -361,8 +360,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT025_Realizar_busca_avançada_filtro_situação_vigencia_futura")]
@@ -381,8 +380,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT026_Realizar_busca_avançada_filtro_tipo_de_documento")]
@@ -401,8 +400,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT027_Realizar_busca_avançada_filtro_categoria")]
@@ -421,8 +420,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT028_Realizar_busca_avançada_filtro_efetivação")]
@@ -442,8 +441,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT029_Realizar_busca_avançada_filtro_validade")]
@@ -463,8 +462,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            
         }
 
         [TestCase(TestName = "CT030_Realizar_busca_avançada_filtro_validade_indefinida")]
@@ -483,8 +482,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT032_Realizar_busca_avançada_todos_os_filtros")]
@@ -509,8 +508,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT035_Visualizar_resultados_como_cards")]
@@ -524,8 +523,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AcessarBuscaAvancada();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT036_Visualizar_resultados_como_lista")]
@@ -540,8 +539,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarVisualizacaoDosResultadosPorLista();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT037_Visualizar_últimas_atualizações")]
@@ -556,8 +555,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarMenuLateral_UltimasAtualizacoes();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT038_Visualizar_meus_favoritos")]
@@ -572,8 +571,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarMenuLateral_MeusFavoritos();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT039_Visualizar_últimos_acessados")]
@@ -588,8 +587,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarMenuLateral_UltimasAtualizacoes();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT039_Visualizar_mais_acessados")]
@@ -604,8 +603,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarMenuLateral_MaisAcessados();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT040_Visualizar_documentos_por_tipo")]
@@ -620,8 +619,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarMenuLateral_DocumentosPorTipo();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT041_Visualizar_documentos_por_área")]
@@ -636,8 +635,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarMenuLateral_DocumentosPorArea();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT042_Visualizar_documentos_por_indexadores")]
@@ -652,8 +651,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarMenuLateral_DocumentosPorIndexadores();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT043_Visualizar_tutoriais")]
@@ -668,8 +667,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarMenuLateral_Tutoriais();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT044_Visualizar_painel_de_atividades")]
@@ -684,8 +683,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarMenuLateral_PainelDeAtividades();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT045_Visualizar_painel_gestão_de_documentos")]
@@ -700,8 +699,8 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.SelecionarMenuLateral_PainelGestaoDocumentos();
 
             //Assert
-            bool resultado = Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            Assert.IsTrue(resultado);
+            Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
     }
 }

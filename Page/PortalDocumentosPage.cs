@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,16 +36,30 @@ namespace DocspiderWebAutomation.Page
             return resultado;
         }
 
-        public static bool ValidarExistenciaDeResultado()
+        public static void ValidarExistenciaDeResultado()
         {
             var elementosEsperados = Elementos.PortalDocumentos.CardResultados();
+            bool resultado;
 
             if (elementosEsperados[0].Text.Equals("Nenhum documento encontrado"))
-                return false;
+                resultado = false;
             else
-                return true;
+                resultado = true;
+
+            Assert.IsTrue(resultado);
         }
 
-        
+        public static void ValidarNaoExistenciaDeResultado()
+        {
+            var elementosEsperados = Elementos.PortalDocumentos.CardResultados();
+            bool resultado;
+
+            if (elementosEsperados[0].Text.Equals("Nenhum documento encontrado"))
+                resultado = true;
+            else
+                resultado = false;
+
+            Assert.IsTrue(resultado);
+        }
     }
 }

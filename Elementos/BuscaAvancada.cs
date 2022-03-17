@@ -3,12 +3,30 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DocspiderWebAutomation.Elementos
 {
     public class BuscaAvancada : CustomWait
     {
+        #region Menu Lateral
+        public static List<IWebElement> FiltroPortal()
+        {
+            return driver.FindElement(By.Id("listaPortal")).FindElements(By.ClassName("checkbox")).ToList();
+        }
+
+        public static List<IWebElement> FiltroSituacao()
+        {
+            return driver.FindElement(By.Id("situacoes")).FindElements(By.ClassName("checkbox")).ToList();
+        }
+
+        public static List<IWebElement> FiltroTipoDocumento()
+        {
+            return driver.FindElement(By.Id("tiposDocumento")).FindElements(By.ClassName("checkbox")).ToList();
+        }
+        #endregion
+
         #region Termos
         public static IWebElement RbtnBuscadoPorPalavra()
         {
@@ -64,7 +82,13 @@ namespace DocspiderWebAutomation.Elementos
         }
         #endregion
 
-        #region Itens do menu "Portal"
+        #region Itens do menu "Portal"        
+        
+        public static IWebElement QuantidadeDeResultadosNaBusca()
+        {
+            return driver.FindElement(By.Id("TotalItemCount"));
+        }
+
         public static IWebElement CheckboxPortal_Automatizacao()
         {
             return driver.FindElement(By.XPath("//*[@id='listaPortal']/div[1]/label/input"));

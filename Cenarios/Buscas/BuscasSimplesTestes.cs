@@ -35,7 +35,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
 
             //Assert
             Page.PortalDocumentosPage.ValidarExistenciaDeResultado();
-            
+            Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
         [TestCase(TestName = "CT002_Realizar_busca_normal_com_dois_termos_iguais")]

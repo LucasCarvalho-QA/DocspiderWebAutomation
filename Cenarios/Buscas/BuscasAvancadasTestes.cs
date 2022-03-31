@@ -145,7 +145,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT014_Realizar_busca_avancada_palavras_todas_ter_retorno_sinônimos")]
+        [TestCase(TestName = "CT014_Realizar_busca_avancada_palavras_todas_ter_retorno_sinonimos")]
         public void BuscasAvancada_FiltroPalavrasTodasTerRetornoSinonimos()
         {
             //Arrange
@@ -185,7 +185,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT016_Realizar_busca_avancada_palavras_qualquer_ter_retorno_sinônimos")]
+        [TestCase(TestName = "CT016_Realizar_busca_avancada_palavras_qualquer_ter_retorno_sinonimos")]
         public void BuscasAvancada_FiltroPalavrasQualquerTerRetornoSinonimos()
         {
             //Arrange

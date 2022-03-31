@@ -6,7 +6,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
     [TestFixture, Category("Buscas Avancadas")]
     internal class BuscasAvancadasTestes : Setup
     {
-        [TestCase(TestName = "CT005_Realizar_busca_avançada_filtro_palavras_todas")]
+        [TestCase(TestName = "CT005_Realizar_busca_avancada_filtro_palavras_todas")]
         public void BuscasAvancada_FiltroPalavrasTodas()
         {
             //Arrange
@@ -25,7 +25,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT006_Realizar_busca_avançada_filtro_palavras_qualquer")]
+        [TestCase(TestName = "CT006_Realizar_busca_avancada_filtro_palavras_qualquer")]
         public void BuscasAvancada_FiltroPalavrasQualquer()
         {
             //Arrange
@@ -36,6 +36,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.AcessarBuscaAvancada();
             Page.BuscaAvancadaPage.PreencherTermoDeBusca("documento de teste");
             Page.BuscaAvancadaPage.SelecionarFiltro_PesquisarPorPalavras();
+            Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
             Page.BuscaAvancadaPage.SelecionarFiltro_FiltrarQualquerPalavra();
             Page.BuscaAvancadaPage.AguardarResultadosPesquisa();
 
@@ -45,7 +46,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT007_Realizar_busca_avançada_filtro_palavras_todas_sem_as_palavras")]
+        [TestCase(TestName = "CT007_Realizar_busca_avancada_filtro_palavras_todas_sem_as_palavras")]
         public void BuscasAvancada_FiltroPalavrasTodasSemAsPalavras()
         {
             //Arrange
@@ -64,7 +65,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT008_Realizar_busca_avançada_filtro_palavras_qualquer_sem_as_palavras")]
+        [TestCase(TestName = "CT008_Realizar_busca_avancada_filtro_palavras_qualquer_sem_as_palavras")]
         public void BuscasAvancada_FiltroPalavrasQualquerSemPalavras()
         {
             //Arrange
@@ -84,7 +85,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT009_Realizar_busca_avançada_filtro_expressoes_todas")]
+        [TestCase(TestName = "CT009_Realizar_busca_avancada_filtro_expressoes_todas")]
         public void BuscasAvancada_FiltroExpressoesTodas()
         {
             //Arrange
@@ -104,7 +105,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT010_Realizar_busca_avançada_filtro_expressões_qualquer")]
+        [TestCase(TestName = "CT010_Realizar_busca_avancada_filtro_expressões_qualquer")]
         public void BuscasAvancada_FiltroExpressoesQualquer ()
         {
             //Arrange
@@ -124,7 +125,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT013_Realizar_busca_avançada_palavras_todas_ter_retorno_radicais")]
+        [TestCase(TestName = "CT013_Realizar_busca_avancada_palavras_todas_ter_retorno_radicais")]
         public void BuscasAvancada_FiltroPalavrasTodasTerRetornoRadicais()
         {
             //Arrange
@@ -144,7 +145,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT014_Realizar_busca_avançada_palavras_todas_ter_retorno_sinônimos")]
+        [TestCase(TestName = "CT014_Realizar_busca_avancada_palavras_todas_ter_retorno_sinônimos")]
         public void BuscasAvancada_FiltroPalavrasTodasTerRetornoSinonimos()
         {
             //Arrange
@@ -164,7 +165,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT015_Realizar_busca_avançada_palavras_qualquer_ter_retorno_radicais")]
+        [TestCase(TestName = "CT015_Realizar_busca_avancada_palavras_qualquer_ter_retorno_radicais")]
         public void BuscasAvancada_FiltroPalavrasQualquerTerRetornoRadicais()
         {
             //Arrange
@@ -184,7 +185,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT016_Realizar_busca_avançada_palavras_qualquer_ter_retorno_sinônimos")]
+        [TestCase(TestName = "CT016_Realizar_busca_avancada_palavras_qualquer_ter_retorno_sinônimos")]
         public void BuscasAvancada_FiltroPalavrasQualquerTerRetornoSinonimos()
         {
             //Arrange
@@ -204,7 +205,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT017_Realizar_busca_avançada_filtro_portal_automatização")]
+        [TestCase(TestName = "CT017_Realizar_busca_avancada_filtro_portal_automatizacao")]
         public void BuscasAvancada_FiltroPortalAutomatizacao()
         {
             //Arrange
@@ -224,7 +225,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT018_Realizar_busca_avançada_filtro_portal_doc_renomeado")]
+        [TestCase(TestName = "CT018_Realizar_busca_avancada_filtro_portal_doc_renomeado")]
         public void BuscasAvancada_FiltroPortalDocRenomeado()
         {
             //Arrange
@@ -244,7 +245,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT019_Realizar_busca_avançada_filtro_portal_normativos_externos")]
+        [TestCase(TestName = "CT019_Realizar_busca_avancada_filtro_portal_normativos_externos")]
         public void BuscasAvancada_FiltroPortalNormativoExternos()
         {
             //Arrange
@@ -264,7 +265,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT020_Realizar_busca_avançada_filtro_portal_normativos_internos")]
+        [TestCase(TestName = "CT020_Realizar_busca_avancada_filtro_portal_normativos_internos")]
         public void BuscasAvancada_FiltroPortalNormativoInternos()
         {
             //Arrange
@@ -284,7 +285,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT021_Realizar_busca_avançada_filtro_portal_processos")]
+        [TestCase(TestName = "CT021_Realizar_busca_avancada_filtro_portal_processos")]
         public void BuscasAvancada_FiltroPortalProcessos()
         {
             //Arrange
@@ -304,7 +305,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT022_Realizar_busca_avançada_filtro_situação_vigente")]
+        [TestCase(TestName = "CT022_Realizar_busca_avancada_filtro_situacao_vigente")]
         public void BuscasAvancada_FiltroSituacaoVigente()
         {
             //Arrange
@@ -324,7 +325,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT023_Realizar_busca_avançada_filtro_situação_obsoleto")]
+        [TestCase(TestName = "CT023_Realizar_busca_avancada_filtro_situacao_obsoleto")]
         public void BuscasAvancada_FiltroSituacaoObsoleto()
         {
             //Arrange
@@ -344,7 +345,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT024_Realizar_busca_avançada_filtro_situação_expirado")]
+        [TestCase(TestName = "CT024_Realizar_busca_avancada_filtro_situacao_expirado")]
         public void BuscasAvancada_FiltroSituacaoExpirado()
         {
             //Arrange
@@ -364,7 +365,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT025_Realizar_busca_avançada_filtro_situação_vigencia_futura")]
+        [TestCase(TestName = "CT025_Realizar_busca_avancada_filtro_situacao_vigencia_futura")]
         public void BuscasAvancada_FiltroSituacaoVigenciaFutura()
         {
             //Arrange
@@ -384,7 +385,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT026_Realizar_busca_avançada_filtro_tipo_de_documento")]
+        [TestCase(TestName = "CT026_Realizar_busca_avancada_filtro_tipo_de_documento")]
         public void BuscasAvancada_FiltroTipoDeDocumento()
         {
             //Arrange
@@ -404,7 +405,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT027_Realizar_busca_avançada_filtro_categoria")]
+        [TestCase(TestName = "CT027_Realizar_busca_avancada_filtro_categoria")]
         public void BuscasAvancada_FiltroCategoria()
         {
             //Arrange
@@ -424,7 +425,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT028_Realizar_busca_avançada_filtro_efetivação")]
+        [TestCase(TestName = "CT028_Realizar_busca_avancada_filtro_efetivacao")]
         public void BuscasAvancada_FiltroEfetivacao()
         {
             //Arrange
@@ -445,7 +446,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT029_Realizar_busca_avançada_filtro_validade")]
+        [TestCase(TestName = "CT029_Realizar_busca_avancada_filtro_validade")]
         public void BuscasAvancada_FiltroValidade()
         {
             //Arrange
@@ -466,7 +467,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             
         }
 
-        [TestCase(TestName = "CT030_Realizar_busca_avançada_filtro_validade_indefinida")]
+        [TestCase(TestName = "CT030_Realizar_busca_avancada_filtro_validade_indefinida")]
         public void BuscasAvancada_FiltroValidadeIndefinida()
         {
             //Arrange
@@ -486,7 +487,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT032_Realizar_busca_avançada_todos_os_filtros")]
+        [TestCase(TestName = "CT032_Realizar_busca_avancada_todos_os_filtros")]
         public void BuscasAvancada_FiltroTodosOsFiltros()
         {
             //Arrange
@@ -543,7 +544,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT037_Visualizar_últimas_atualizações")]
+        [TestCase(TestName = "CT037_Visualizar_últimas_atualizacões")]
         public void VisualizarMenuLateral_UltimasAtualizacoes()
         {
             //Arrange
@@ -623,7 +624,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT041_Visualizar_documentos_por_área")]
+        [TestCase(TestName = "CT041_Visualizar_documentos_por_area")]
         public void VisualizarMenuLateral_DocumentoPorArea()
         {
             //Arrange
@@ -687,7 +688,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT045_Visualizar_painel_gestão_de_documentos")]
+        [TestCase(TestName = "CT045_Visualizar_painel_gestao_de_documentos")]
         public void VisualizarMenuLateral_PainelGestaoDeDocumentos()
         {
             //Arrange

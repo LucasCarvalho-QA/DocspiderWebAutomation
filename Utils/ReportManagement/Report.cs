@@ -15,15 +15,13 @@ namespace DocspiderWebAutomation.Utils.ReportManagement
         public string ElapsedTime { get; set; }
         public string TestMethodName { get; set; }
         public string AzureTestCaseName { get; set; }
-        public string BodyRequest { get; set; }
-        public string BodyResponse { get; set; }
-        public string HttpStatusResponse { get; set; }
         public string Datetime { get; set; }
         public string Outcome { get; set; }
         public string ExpectedOutcome { get; set; }
         public string TestCategory { get; set; }
         public string StackTrace { get; set; }
         public string ExpectedBodyRequest { get; set; }
+        public static List<string> ListErrors = new List<string>();
 
         public static Report report = null;
 
@@ -38,9 +36,15 @@ namespace DocspiderWebAutomation.Utils.ReportManagement
                 TestMethodName = TestContext.CurrentContext.Test.MethodName,
                 AzureTestCaseName = TestContext.CurrentContext.Test.Name,
             };
-            
+
+            GetResultAssertions();
             report = reportBody;
         }
-        
+
+        public void GetResultAssertions()
+        {
+            foreach (var item in TestContext.CurrentContext.Result.Assertions)
+                ListErrors.Add(item.Message);
+        }
     }
 }

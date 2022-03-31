@@ -296,9 +296,9 @@ namespace DocspiderWebAutomation.Page
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(quantidadeDeResultadoApresentados_FiltroPortal.Item1, quantidadeDeResultadoApresentados_FiltroPortal.Item2);
-                Assert.AreEqual(quantidadeDeResultadoApresentados_FiltroSituacao.Item1, quantidadeDeResultadoApresentados_FiltroSituacao.Item2);
-                Assert.AreEqual(quantidadeDeResultadoApresentados_FiltroTipoDocumento.Item1, quantidadeDeResultadoApresentados_FiltroTipoDocumento.Item2);
+                Assert.AreEqual(quantidadeDeResultadoApresentados_FiltroPortal.Item1, quantidadeDeResultadoApresentados_FiltroPortal.Item2, "Documentos no Filtro Portal");
+                Assert.AreEqual(quantidadeDeResultadoApresentados_FiltroSituacao.Item1, quantidadeDeResultadoApresentados_FiltroSituacao.Item2, "Documentos no Filtro Situação");
+                Assert.AreEqual(quantidadeDeResultadoApresentados_FiltroTipoDocumento.Item1, quantidadeDeResultadoApresentados_FiltroTipoDocumento.Item2, "Documentos no Filtro Tipo Documento");
             });
             
         }

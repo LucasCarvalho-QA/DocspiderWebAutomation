@@ -13,7 +13,7 @@ namespace DocspiderWebAutomation.Page
 
         public static bool VerificarPresencaNaPagina()
         {
-            var elementosEsperados = Elementos.PaginaInicial.BtnAcessarPortalDocumentos();
+            var elementosEsperados = Elementos.PaginaInicial.ImgLogoDocspider();
 
             if (elementosEsperados == null)
                 return false;

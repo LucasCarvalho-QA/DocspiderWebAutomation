@@ -22,7 +22,7 @@ namespace DocspiderWebAutomation.Utils.ReportManagement
 
             var name = StringFormatter.RegexCustom.NormalizeStringToSave(TestContext.CurrentContext.Test.Name);
            
-            var filename = $"{outcome.Replace("Failed:Error", "Failed")}_{name}.txt";
+            var filename = $"{outcome.Replace("Failed:Error", "Falha")}_{name}.txt";
 
             SaveFile(report, path, filename);
         }
@@ -48,15 +48,13 @@ namespace DocspiderWebAutomation.Utils.ReportManagement
 
         public string GetReport(Report report)
         {
+            string errorList = StringFormatter.String.ListToString(Report.ListErrors).Replace("Expected", "Esperado").Replace("But was", "Encontrado");
+
             return $"================================================================================================== \n" +
-                    $"URL: {report.Url} \n" +
-                    $"MÉTODO: {report.Method} \n" +
                     $"DATA: {report.Datetime} \n" +
                     $"NOME DO MÉTODO: {report.TestMethodName} \n" +
-                    $"AZURE TEST CASE: {report.AzureTestCaseName} \n" +
                     $"RESULTADO: {report.Outcome} \n" +
-                    $"DURAÇÃO DA CHAMADA: {report.CurrentRequestElapsedTime} segundos\n\n" +
-                    $"TEMPO TOTAL DE EXECUÇÃO: {report.ElapsedTime} segundos\n" +
+                    $"LISTA DE ERROS: \n{errorList}\n" +
                     $"================================================================================================== \n";
         }
     }

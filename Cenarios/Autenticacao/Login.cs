@@ -14,7 +14,7 @@ namespace DocspiderWebAutomation.Cenarios.Autenticacao
         {
             //Arrange
             //Act
-            Page.LoginPage.RealizarLogin("docspider", "docspider");
+            Page.LoginPage.RealizarLogin("camila", "123456");
 
             //Assert
             bool resultado = Page.PaginaInicialPage.VerificarPresencaNaPagina();

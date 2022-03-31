@@ -65,14 +65,18 @@ namespace DocspiderWebAutomation.SetupProject
             if (TestContext.CurrentContext.Result.FailCount > 0)
                 localReport.StackTrace += TestContext.CurrentContext.Result.Message ?? "";
 
-            localReport.Outcome = TestContext.CurrentContext.Result.Outcome.ToString();
+            localReport.Outcome = TestContext.CurrentContext.Result.Outcome.ToString() == "Passed" ? "Sucesso" : "Falha";
+            
 
             stopwatch.Stop();
             tempoDecorridoTotal = stopwatch.Elapsed.TotalSeconds.ToString("N2");
             localReport.ElapsedTime = tempoDecorridoTotal;
             reportService.SaveReport(reportService.GetReport(localReport), localReport.Outcome);
             ScreenshotUtils.PrintScreen();
+            Report.ListErrors = new List<string>();
         }
+
+        
 
         [OneTimeTearDown]
         public void RunAfterAnyTests()

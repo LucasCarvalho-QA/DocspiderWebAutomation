@@ -9,8 +9,8 @@ namespace DocspiderWebAutomation.Page
     {
         public static void RealizarLoginComSucesso()
         {
-            Elementos.Login.TxtUsuarioLogin().SendKeys("docspider");
-            Elementos.Login.TxtUsuarioSenha().SendKeys("docspider");
+            Elementos.Login.TxtUsuarioLogin().SendKeys("camila");
+            Elementos.Login.TxtUsuarioSenha().SendKeys("123456");
             Elementos.Login.BtnAcessar().Click();
         }
 

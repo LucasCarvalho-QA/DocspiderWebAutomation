@@ -15,7 +15,7 @@ namespace DocspiderWebAutomation.Elementos
 
         public static IWebElement PaginaInteira()
         {
-            return driver.FindElement(By.Id("portal"));
+            return driver.FindElement(By.XPath("/html/body"));
         }
     }
 }

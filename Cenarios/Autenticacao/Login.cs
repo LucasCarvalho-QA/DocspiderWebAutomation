@@ -9,7 +9,7 @@ namespace DocspiderWebAutomation.Cenarios.Autenticacao
     [TestFixture, Category("Autenticacao")]
     public class Login : Setup
     {
-        [TestCase(TestName = "CT001_Acesso_usuário_senha_válido")]
+        [TestCase(TestName = "CT001_Acesso_usuario_senha_valido")]
         public void Autenticacao_AcessoComUsuarioSenhaValidos()
         {
             //Arrange
@@ -21,7 +21,7 @@ namespace DocspiderWebAutomation.Cenarios.Autenticacao
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT002_Acesso_usuário_senha_inválido")]
+        [TestCase(TestName = "CT002_Acesso_usuario_senha_invalido")]
         public void Autenticacao_AcessoComUsuarioSenhaInvalidos()
         {
             //Arrange
@@ -33,7 +33,7 @@ namespace DocspiderWebAutomation.Cenarios.Autenticacao
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT003_Acesso_usuário_inválido_senha_válida")]
+        [TestCase(TestName = "CT003_Acesso_usuario_invalido_senha_valida")]
         public void Autenticacao_AcessoComUsuarioInvalidoSenhaValida()
         {
             //Arrange
@@ -45,7 +45,7 @@ namespace DocspiderWebAutomation.Cenarios.Autenticacao
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT004_Acesso_usuário_válido_senha_inválida")]
+        [TestCase(TestName = "CT004_Acesso_usuario_valido_senha_invalida")]
         public void Autenticacao_AcessoComUsuarioValidoSenhaInvalida()
         {
             //Arrange
@@ -57,7 +57,7 @@ namespace DocspiderWebAutomation.Cenarios.Autenticacao
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT005_Acesso_usuário_válido_senha_em_branco")]
+        [TestCase(TestName = "CT005_Acesso_usuario_valido_senha_em_branco")]
         public void Autenticacao_AcessoComUsuarioValidoSenhaEmBranco()
         {
             //Arrange
@@ -69,7 +69,7 @@ namespace DocspiderWebAutomation.Cenarios.Autenticacao
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT006_Acesso_usuário_em_branco_senha_valida")]
+        [TestCase(TestName = "CT006_Acesso_usuario_em_branco_senha_valida")]
         public void Autenticacao_AcessoComUsuarioEmBrancoSenhaValida()
         {
             //Arrange
@@ -81,7 +81,7 @@ namespace DocspiderWebAutomation.Cenarios.Autenticacao
             Assert.IsTrue(resultado);
         }
 
-        [TestCase(TestName = "CT008_Acesso_usuário_e_senha_em_branco")]
+        [TestCase(TestName = "CT008_Acesso_usuario_e_senha_em_branco")]
         public void Autenticacao_AcessoComUsuarioSenhaEmBranco()
         {
             //Arrange

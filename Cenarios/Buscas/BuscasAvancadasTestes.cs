@@ -105,7 +105,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT010_Realizar_busca_avancada_filtro_expressões_qualquer")]
+        [TestCase(TestName = "CT010_Realizar_busca_avancada_filtro_expressoes_qualquer")]
         public void BuscasAvancada_FiltroExpressoesQualquer ()
         {
             //Arrange
@@ -544,7 +544,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT037_Visualizar_últimas_atualizacões")]
+        [TestCase(TestName = "CT037_Visualizar_últimas_atualizacoes")]
         public void VisualizarMenuLateral_UltimasAtualizacoes()
         {
             //Arrange

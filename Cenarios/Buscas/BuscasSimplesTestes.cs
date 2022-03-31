@@ -22,7 +22,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT003_Realizar_busca_normal_com_conteúdo")]
+        [TestCase(TestName = "CT003_Realizar_busca_normal_com_conteudo")]
         public void BuscasSimples_RealizarBuscaNormalComConteudo()
         {
             //Arrange
@@ -55,7 +55,7 @@ namespace DocspiderWebAutomation.Cenarios.Buscas
             Page.BuscaAvancadaPage.ValidarQuantidadeDeResultadoApresentados();
         }
 
-        [TestCase(TestName = "CT004_Realizar_busca_normal_com_conteúdo_inválido")]
+        [TestCase(TestName = "CT004_Realizar_busca_normal_com_conteudo_invalido")]
         public void BuscasSimples_RealizarBuscaNormalComConteudoInvalido()
         {
             //Arrange
